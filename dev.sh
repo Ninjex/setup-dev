@@ -8,7 +8,7 @@ cd dev-area
 echo "Attempting to clone the repository."
 git clone git@libroot.com:libroot.git
 
-cd libroot
+cd libroot/www
 
 echo "Attempting to update Composer."
 sudo composer self-update
@@ -16,12 +16,10 @@ sudo composer self-update
 echo "Attempting to install composer"
 composer install
 
-cd www
+cp .env.example .env
 
 echo "Generating key."
 php  artisan key:generate
-
-cp .env.example .env
 
 echo "Getting APP_KEY"
 rm_key=$(cat .env | grep 'APP_KEY')
