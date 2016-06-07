@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mv ../setup-dev ~/
 cd ~/
 mkdir dev-area
 cd dev-area
