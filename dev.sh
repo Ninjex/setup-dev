@@ -17,6 +17,10 @@ echo "Attempting to install composer"
 composer install
 
 cd www
+
+echo "Generating key."
+php  artisan key:generate
+
 cp .env.example .env
 
 echo "Getting APP_KEY"
